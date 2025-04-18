@@ -9,7 +9,6 @@ def main():
     start_time = time.time()
 
     contents = Path(basePath + 'sample.txt').read_text()
-    #contents = Path(basePath + '10_million_real_words.txt').read_text()
 
     words = contents.split()
 
@@ -20,7 +19,6 @@ def main():
         anagram_groups[key].append(word)
 
     output_path = basePath + 'anagram_groups.txt'
-    #output_path = basePath + 'anagram_groups_10_million.txt'
 
     with open(output_path, 'w', encoding='utf-8') as f:
         for group in anagram_groups.values():
